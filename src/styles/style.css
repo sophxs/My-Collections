@@ -15,7 +15,7 @@
 }
 
 body {
-  background-image: url(/src/images/Sem\ Título-1.jpg);
+  background-image: url('/src/images/fundo.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
