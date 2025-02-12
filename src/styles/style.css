@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+* {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+  --background: #000000;
+  --text: #ff0099;
+  --text-light: #ffffff; 
+}
+
+body {
+  background-image: url(/src/images/Sem\ Título-1.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+}
+
+#text {
+  display: flex;
+  justify-content: center;
+}
+
+#content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  width: 100%;
+}
+
+#collections {
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+  gap: 8rem;
+}
+
+#collections img {
+  width: 35rem;
+	height: 35rem;
+}
+
+@media screen and (max-width: 865px) {
+  #collections {
+    gap: 5rem;
+  }
+
+  #collections img {
+    width: 25rem;
+    height: 25rem;
+  }
+
+  #text img {
+    width: 45rem;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  #collections {
+    margin-top: 7rem;
+  }
+
+  #collections img {
+    width: 20rem;
+    height: 20rem;
+  }
+
+  #text img {
+    width: 40rem;
+  }
+}
+
+@media screen and (max-width: 525px) {
+  #collections {
+    flex-wrap: wrap;
+    margin-top: 4rem;
+    gap: 3rem;
+  }
+
+  #collections img {
+    width: 20rem;
+    height: 20rem;
+  }
+
+  #text img {
+    width: 27rem;
+  }
+}
