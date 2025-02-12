@@ -15,7 +15,7 @@
 }
 
 body {
-  background-image: url('/src/images/fundo.jpg');
+  background-image: url('https://github.com/sophxs/My-Collections/blob/main/src/images/fundo.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
