@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
 
-* {
+*:not(dialog) {
   font-family: 'Poppins', sans-serif;
   margin: 0;
   padding: 0;
@@ -10,6 +10,7 @@
 :root {
   font-size: 62.5%;
   --background: #000000;
+  --background-modal:#00000088;
   --text: #ff0099;
   --text-light: #ffffff; 
 }
@@ -21,7 +22,12 @@ body {
   background-repeat: no-repeat;
   height: 100vh;
   margin: 0;
-  overflow: hidden;
+}
+
+button {
+  border-style: none;
+  cursor: pointer;
+  background: none;
 }
 
 #text {
@@ -49,6 +55,78 @@ body {
   width: 35rem;
 	height: 35rem;
 }
+
+dialog::backdrop {
+  background-color: var(--background-modal);
+}
+
+dialog {
+  border-radius: 2rem;
+  background-color: var(--text);
+}
+
+.close-modal {
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  color: var(--background);
+  font-size: 1.8rem;
+}
+
+.slider {
+  width: 50rem;
+  height: 50rem;
+  overflow: hidden;
+}
+
+.slides {
+  width: 25rem;
+  height: 50rem;
+  display: flex;
+}
+
+.slides input {
+  display: none;
+}
+
+.slide {
+  width: 50rem;
+  position: relative;
+}
+
+.slide img {
+  width: 50rem;
+}
+
+.manual-navigation {
+  position: absolute;
+  width: 50rem;
+  margin-top: 45rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.manual-btn {
+  border: 0.2rem solid var(--background);
+  padding: 0.5rem;
+  border-radius: 1rem;
+  cursor: pointer;
+  transition: 1s;
+}
+
+.manual-btn:hover{
+  background-color: var(--background);
+}
+
+#radio1:checked ~ .first {
+  margin-left: 0;
+}
+
+#radio2:checked ~ .first {
+  margin-left: -50rem;
+}
+
 
 @media screen and (max-width: 865px) {
   #collections {
