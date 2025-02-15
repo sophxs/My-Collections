@@ -4,17 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My collection</title>
-
+  <script src="https://kit.fontawesome.com/7ac1ee141e.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="src/styles/style.css"/>
-
-  <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
-      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
-
-    <script src="https://unpkg.com/scrollreveal"></script>
 </head>
 <body>
   <main id="content">
@@ -23,19 +14,51 @@
     </section>
 
     <section id="collections">
-      <div id="yoonmin">
-        <a href="" target="_blank">
+      <button id="yoonmin" class="open-modal" data-modal="modal-1">
           <img src="src/images/yoonmin.jpg" alt="yoonmin"/>
-        </a>
-       </div>
+       </button>
 
-      <div id="hyunlix">
-        <a href="" target="_blank">
+      <button id="hyunlix" class="open-modal" data-modal="modal-2">
           <img src="src/images/hyunlix.jpg" alt="hyunlix"/>
-        </a>
-      </div>
-    </section>   
+      </button>
+    </section>  
+
+    <sections id="modals">
+      <dialog id="modal-1">
+        <button class="close-modal" data-modal="modal-1">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+        <div class="slider">
+          <div class="slides">
+            <input type="radio" name="radio-btn" id="radio1">
+            <input type="radio" name="radio-btn" id="radio2">
+
+            <div class="slide first">
+              <img src="/src/images/hyunlix.jpg" alt="">
+            </div>
+            <div class="slide">
+              <img src="/src/images/yoonmin.jpg" alt="">
+            </div>
+
+            <div class="manual-navigation">
+              <label for="radio1" class="manual-btn"></label>
+              <label for="radio2" class="manual-btn"></label>
+            </div>
+          </div>
+        </div>
+      </dialog>
+  
+      <dialog id="modal-2">
+        <button class="close-modal" data-modal="modal-2">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </dialog>
+
+    </sections>
+    
   </main>
+
+  <script src="/src/javascript/script.js"></script>
   
 </body>
 </html>
